@@ -56,10 +56,25 @@ html {
 .caixa9 {
     height: 100%;
     background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
+}
+
+@supports ( -webkit-touch-callout: none) {
+    .selector {
+        background-attachment: scroll
+    }
+}
+
+@supports not ( -webkit-touch-callout: none) {
+    .selector {
+        background-attachment: fixed;
+    }
 }
 
 .caixa1 {
